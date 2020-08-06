@@ -17,6 +17,7 @@
 #define IMAG_INFO(...)       ::Imag::Log::GetClientLogger()->info(__VA_ARGS__)
 #define IMAG_WARN(...)     ::Imag::Log::GetClientLogger()->warn(__VA_ARGS__)
 #define IMAG_FATAL(...)     ::Imag::Log::GetClientLogger()->fatal(__VA_ARGS__)
+
 namespace Imag {
 	class IMAG_API Log
 	{
