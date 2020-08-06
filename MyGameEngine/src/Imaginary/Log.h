@@ -2,6 +2,7 @@
 #include <memory>
 #include "Core.h"
 #include"spdlog/spdlog.h"
+#include"spdlog/fmt/ostr.h"
 
 //core log macros
 #define IMAG_CORE_ERROR(...)	   ::Imag::Log::GetCoreLogger()->error(__VA_ARGS__)
