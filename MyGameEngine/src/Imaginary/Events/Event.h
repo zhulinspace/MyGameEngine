@@ -1,8 +1,7 @@
 #pragma once
 #include "Imaginary/Core.h"
 
-#include<string>
-#include<functional>
+
 
 
 namespace Imag {

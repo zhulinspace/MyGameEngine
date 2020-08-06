@@ -1,6 +1,7 @@
 
-
+#include"imgpch.h"
 #include "Imag.h"
+
 
 class SandBox : public Imag::Application
 {

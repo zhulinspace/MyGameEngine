@@ -1,3 +1,5 @@
+#include"imgpch.h"
+
 #include "Application.h"
 #include"Imaginary/Events/ApplicationEvent.h"
 #include"Imaginary/Log.h"
