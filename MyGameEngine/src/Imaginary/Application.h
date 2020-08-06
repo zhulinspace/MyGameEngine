@@ -10,6 +10,7 @@ namespace Imag {
 		virtual ~Application();
 		void Run();
 
+
 	};
 
 	//To be defined in Client
