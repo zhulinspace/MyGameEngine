@@ -9,6 +9,22 @@ workspace "MyGameEngine"
 		}
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "MyGameEngine/vendor/GLFW/include"
+--IncludeDir["Glad"] = "MyGameEngine/vendor/Glad/include"
+--IncludeDir["ImGui"] = "MyGameEngine/vendor/imgui"
+--IncludeDir["glm"] = "MyGameEngine/vendor/glm"
+--IncludeDir["stb_image"] = "MyGameEngine/vendor/stb_image"
+--IncludeDir["entt"] = "MyGameEngine/vendor/entt/include"
+
+include "MyGameEngine/vendor/GLFW" --include premake file in glfw
+--group "Dependencies"
+--	include "Hazel/vendor/GLFW"
+--	include "Hazel/vendor/Glad"
+--	include "Hazel/vendor/imgui"
+--group ""
+
 project "MyGameEngine"
 		location "MyGameEngine"
 		kind "SharedLib"
@@ -24,13 +40,19 @@ project "MyGameEngine"
 		{
 			"%{prj.name}/src/**.h",
 			"%{prj.name}/src/**.cpp",
-
 		}
 
 		includedirs
 		{
 			"%{prj.name}/src",
-			"%{prj.name}/vendor/spdlog/include"
+			"%{prj.name}/vendor/spdlog/include",
+			"%{IncludeDir.glfw}"
+		}
+
+		links
+		{
+			"GLFW",
+			"opengl32.lib"
 		}
 
 		filter "system:windows"

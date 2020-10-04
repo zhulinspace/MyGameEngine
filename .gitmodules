@@ -1,6 +1,6 @@
 [submodule "MyGameEngine/vendor/spdlog"]
 	path = MyGameEngine/vendor/spdlog
 	url = git@github.com:gabime/spdlog
-[submodule "MyGameEngine/vendor/glfw"]
-	path = MyGameEngine/vendor/glfw
+[submodule "MyGameEngine/vendor/GLFW"]
+	path = MyGameEngine/vendor/GLFW
 	url = git@github.com:zhulinspace/glfw.git
